@@ -14,7 +14,8 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-	df= pd.read_csv("cleanedflask.csv")
+	url = "https://raw.githubusercontent.com/keshvell/PregPKIT/master/cleanedflask.csv"
+	df= pd.read_csv(url)
 	df_data = df[["Cleantext","Target"]]
 	# Features and Labels
 	df_x = df_data['Cleantext']
