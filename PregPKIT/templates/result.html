@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<img src="{{ url_for('static', filename='pregnant.png' ) }}" alt="pregnant" width="500" height="500">
+		<div id="brandname">
+			<h1>PregPKIT : The Pregnancy PharmacoKinetics Identifier Tool<h1>
+			<h2>Extracts the Clinical PK evidence from full-text article<h2>
+		</div>
+			
+			
+	</div>
+	</header>
+	<p style="color: black;font-size:25;font-weight:bold;text-align: center;"><b>Results for Search [Blue =  Relevant sentences | Grey = Irrelevant sentences ]</b></p>
+	<div class="results">
+	
+	{% for k, v in prediction.items() %}
+		{% if v == 0%}
+		<p style="color:grey;font-size:12;">{{ k }}</p>
+		{% elif v == 1%}
+		<p style="color:blue;font-size:12;">{{ k }}</p>
+		{% endif %}
+  	{% endfor %}
+
+	</div>
+	</div>
+	  <h1 class="results">
+    THANK YOU FOR USING  PregPKIT
+</div> </h1>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body{
+	font:15px/1.5 "Times New Roman", Times, serif;
+	padding: 0px;
+	background-color:#FFFFFF;
+}
+
+.container{
+	width:100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+header{
+	background:#ff1493;#35434a;
+	border:#000000 5px solid;
+	height:120px;
+	width:100%;
+	padding-top:10px;
+
+}
+img {
+    border: #000000 2px solid;
+    border-radius: 3px/1px;
+    width: 150px;
+    height:100px;
+    float:left;
+}
+
+.main-header{
+			text-align:center;
+			background-color: #f8d8e8;
+			height:70px;
+			width:100%;
+			margin:0px;
+			font-size:60px;
+		}
+#brandname{
+	float:center;
+	color: #fff;
+	margin: 10px;
+}
+
+header h2{
+	text-align:center;
+	color:#fff;
+    font:12px
+}
+
+
+
+.btn-info {background-color: #fefeee;
+	height:40px;
+	width:100px;} /* Blue */
+.btn-info:hover {background: #075391;}
+
+
+.resultss{
+	border-radius: 15px 50px;
+    background: #FFFFFF;
+    padding: 10px; 
+    width: 200px;
+    height: 150px;
+}

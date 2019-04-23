@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<script>  
+$(document).on("input", "textarea", function()
+{
+$(this).prop('style').cssText = 'height:auto;';
+$(this).prop('style').cssText = 'height:' + $(this).prop('scrollHeight') + 'px';
+});
+
+</script> 
+<style>
+textarea
+{
+  resize:none;
+  max-height:450px;
+  min-height:250px;
+  
+}
+</style> 
+
+</head>
+
+<body>
+   
+	<header>
+		<div class="container">
+		
+		<img src="{{ url_for('static', filename='pregnant.png' ) }}" alt="pregnant" width="500" height="500">
+         <div id="brandname">
+			<h1>PregPKIT : The Pregnancy PharmacoKinetics Identifier Tool<h1>
+			<h2>Extracts the Clinical PK evidence from full-text article<h2>
+		</div>
+			<!--<h2>SPIR APP</span> </h2>--!>
+			
+	</div>
+	</header>
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter the article text in below box</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea style="width:100%;" name="comment" ></textarea> 
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		<a href="{{ url_for('home')}}" type="button" class="btn-info" > Reset</a>
+	</form>
+		
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+	
+     
+</body>
+</html>
